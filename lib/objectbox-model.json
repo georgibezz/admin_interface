@@ -1,0 +1,106 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "2:5737983589119967379",
+      "lastPropertyId": "4:4909696018707405954",
+      "name": "Item",
+      "properties": [
+        {
+          "id": "1:3354576037621185619",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4681244288878565703",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:9168253028374504162",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:4909696018707405954",
+          "name": "usages",
+          "type": 30
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5062988298748516354",
+      "lastPropertyId": "4:8728788337455760273",
+      "name": "Plan",
+      "properties": [
+        {
+          "id": "1:7325565855644243873",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3280318805178033855",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3911973129190700674",
+          "name": "instruction",
+          "type": 9
+        },
+        {
+          "id": "4:8728788337455760273",
+          "name": "cautions",
+          "type": 30
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:1203151557266320519",
+      "lastPropertyId": "3:1029188923746380241",
+      "name": "Conditions",
+      "properties": [
+        {
+          "id": "1:4583499502016593274",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3771466489577810201",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:1029188923746380241",
+          "name": "causes",
+          "type": 30
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:1203151557266320519",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    7156376995514361613
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    5470165977763736949,
+    304611855508611774,
+    1811975008986571413
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
