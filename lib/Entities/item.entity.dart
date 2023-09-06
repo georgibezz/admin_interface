@@ -9,18 +9,39 @@ class Item {
   String name;
 
   @Property()
-  String description;
+  String alsoCalled;
 
   @Property()
-  List<String> usages;
+  String source;
 
-  @Transient()
-  bool isSelected = false; // Add this line
+  @Property()
+  String partUsed;
+
+  @Property()
+  String formsAvailable;
+
+  @Property()
+  String uses;
+
+  @Property()
+  String caution;
+
+  @Property()
+  String conscientiousConsumerInformation;
+
+  @Property()
+  String references;
 
   Item({
     required this.id,
     required this.name,
-    required this.description,
-    required this.usages,
+    required this.alsoCalled,
+    required this.source,
+    required this.partUsed,
+    required this.formsAvailable,
+    required this.uses,
+    required this.caution,
+    required this.conscientiousConsumerInformation,
+    required this.references,
   });
 }

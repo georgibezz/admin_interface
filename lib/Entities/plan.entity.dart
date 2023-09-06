@@ -1,26 +1,29 @@
 import 'package:objectbox/objectbox.dart';
 
+import 'package:objectbox/objectbox.dart';
+
 @Entity()
 class Plan {
   @Id()
   int id = 0;
 
   @Property()
-  String name;
+  String condition;
 
   @Property()
-  String instruction;
+  String commonlyUsedDrugs;
 
   @Property()
-  List<String> cautions;
+  String herbalAlternative;
 
-  @Transient()
-  bool isSelected = false; // Add this line
+  @Property()
+  String howToUse;
 
   Plan({
     required this.id,
-    required this.name,
-    required this.instruction,
-    required this.cautions,
+    required this.condition,
+    required this.commonlyUsedDrugs,
+    required this.herbalAlternative,
+    required this.howToUse,
   });
 }

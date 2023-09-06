@@ -4,37 +4,8 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "2:5737983589119967379",
-      "lastPropertyId": "4:4909696018707405954",
-      "name": "Item",
-      "properties": [
-        {
-          "id": "1:3354576037621185619",
-          "name": "id",
-          "type": 6,
-          "flags": 1
-        },
-        {
-          "id": "2:4681244288878565703",
-          "name": "name",
-          "type": 9
-        },
-        {
-          "id": "3:9168253028374504162",
-          "name": "description",
-          "type": 9
-        },
-        {
-          "id": "4:4909696018707405954",
-          "name": "usages",
-          "type": 30
-        }
-      ],
-      "relations": []
-    },
-    {
       "id": "3:5062988298748516354",
-      "lastPropertyId": "4:8728788337455760273",
+      "lastPropertyId": "8:1710239404745649540",
       "name": "Plan",
       "properties": [
         {
@@ -44,19 +15,24 @@
           "flags": 1
         },
         {
-          "id": "2:3280318805178033855",
-          "name": "name",
+          "id": "5:253515875125291318",
+          "name": "condition",
           "type": 9
         },
         {
-          "id": "3:3911973129190700674",
-          "name": "instruction",
+          "id": "6:8820603313148705527",
+          "name": "commonlyUsedDrugs",
           "type": 9
         },
         {
-          "id": "4:8728788337455760273",
-          "name": "cautions",
-          "type": 30
+          "id": "7:6580912062546562000",
+          "name": "herbalAlternative",
+          "type": 9
+        },
+        {
+          "id": "8:1710239404745649540",
+          "name": "howToUse",
+          "type": 9
         }
       ],
       "relations": []
@@ -84,22 +60,97 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "5:807709831922303126",
+      "lastPropertyId": "10:6369378659556070261",
+      "name": "Item",
+      "properties": [
+        {
+          "id": "1:3157613714833054686",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7122292881347662402",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:7772560157505084293",
+          "name": "alsoCalled",
+          "type": 9
+        },
+        {
+          "id": "4:7078256748978629697",
+          "name": "source",
+          "type": 9
+        },
+        {
+          "id": "5:7136333561074695005",
+          "name": "partUsed",
+          "type": 9
+        },
+        {
+          "id": "6:8576542471820391976",
+          "name": "formsAvailable",
+          "type": 9
+        },
+        {
+          "id": "7:452089478305907725",
+          "name": "uses",
+          "type": 9
+        },
+        {
+          "id": "8:1170098714901606795",
+          "name": "caution",
+          "type": 9
+        },
+        {
+          "id": "9:4411069709684713950",
+          "name": "conscientiousConsumerInformation",
+          "type": 9
+        },
+        {
+          "id": "10:6369378659556070261",
+          "name": "references",
+          "type": 9
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "4:1203151557266320519",
+  "lastEntityId": "5:807709831922303126",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
   "modelVersionParserMinimum": 5,
   "retiredEntityUids": [
-    7156376995514361613
+    7156376995514361613,
+    5737983589119967379
   ],
   "retiredIndexUids": [],
   "retiredPropertyUids": [
     5470165977763736949,
     304611855508611774,
-    1811975008986571413
+    1811975008986571413,
+    9168253028374504162,
+    4909696018707405954,
+    3280318805178033855,
+    3911973129190700674,
+    8728788337455760273,
+    3354576037621185619,
+    4681244288878565703,
+    8367681146813746213,
+    3799544707657440002,
+    6324284888265641205,
+    620823307664622911,
+    1114562976023767699,
+    6181987701388496367,
+    2336374572361523251,
+    7741183020542145625
   ],
   "retiredRelationUids": [],
   "version": 1

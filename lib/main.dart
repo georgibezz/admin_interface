@@ -1,11 +1,8 @@
-// main.dart
-import 'dart:io';
+import 'package:admin/utils/excel.handler.dart';
 import 'package:flutter/material.dart';
-import 'objectbox.store.dart'; // Import the database.dart file
-import 'entities/item.entity.dart'; // Import your entity files
-import 'entities/conditions.entity.dart';
-import 'entities/plan.entity.dart';
 import 'objectbox.g.dart';
+import 'dart:io';
+import 'entities/item.entity.dart';
 
 late final Store store;
 
@@ -40,7 +37,6 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -70,9 +66,14 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('ObjectBox Sync Flutter App'),
       ),
       body: Center(
-        child: Text('Welcome to your ObjectBox Sync Flutter App!'),
+        child: ElevatedButton(
+          onPressed: () {
+            // Call the function to insert data from Excel
+            ExcelHandler.insertDataFromExcel();
+          },
+          child: Text('Import Data from Excel'),
+        ),
       ),
     );
   }
 }
-// ... rest of the main.dart remains the same
