@@ -17,6 +17,7 @@ import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 import 'Entities/conditions.entity.dart';
 import 'Entities/item.entity.dart';
 import 'Entities/plan.entity.dart';
+import 'Entities/symptom.entity.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
@@ -137,6 +138,30 @@ final _entities = <ModelEntity>[
             flags: 0)
       ],
       relations: <ModelRelation>[],
+      backlinks: <ModelBacklink>[]),
+  ModelEntity(
+      id: const IdUid(6, 5293340169370124747),
+      name: 'Symptoms',
+      lastPropertyId: const IdUid(3, 6193674609565364483),
+      flags: 0,
+      properties: <ModelProperty>[
+        ModelProperty(
+            id: const IdUid(1, 5410593956974798263),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        ModelProperty(
+            id: const IdUid(2, 4020999837862553949),
+            name: 'name',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(3, 6193674609565364483),
+            name: 'causes',
+            type: 30,
+            flags: 0)
+      ],
+      relations: <ModelRelation>[],
       backlinks: <ModelBacklink>[])
 ];
 
@@ -167,7 +192,7 @@ Future<Store> openStore(
 ModelDefinition getObjectBoxModel() {
   final model = ModelInfo(
       entities: _entities,
-      lastEntityId: const IdUid(5, 807709831922303126),
+      lastEntityId: const IdUid(6, 5293340169370124747),
       lastIndexId: const IdUid(0, 0),
       lastRelationId: const IdUid(0, 0),
       lastSequenceId: const IdUid(0, 0),
@@ -354,6 +379,41 @@ ModelDefinition getObjectBoxModel() {
               references: referencesParam);
 
           return object;
+        }),
+    Symptoms: EntityDefinition<Symptoms>(
+        model: _entities[3],
+        toOneRelations: (Symptoms object) => [],
+        toManyRelations: (Symptoms object) => {},
+        getId: (Symptoms object) => object.id,
+        setId: (Symptoms object, int id) {
+          object.id = id;
+        },
+        objectToFB: (Symptoms object, fb.Builder fbb) {
+          final nameOffset = fbb.writeString(object.name);
+          final causesOffset = fbb.writeList(
+              object.causes.map(fbb.writeString).toList(growable: false));
+          fbb.startTable(4);
+          fbb.addInt64(0, object.id);
+          fbb.addOffset(1, nameOffset);
+          fbb.addOffset(2, causesOffset);
+          fbb.finish(fbb.endTable());
+          return object.id;
+        },
+        objectFromFB: (Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
+          final nameParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 6, '');
+          final causesParam = const fb.ListReader<String>(
+                  fb.StringReader(asciiOptimization: true),
+                  lazy: false)
+              .vTableGet(buffer, rootOffset, 8, []);
+          final object =
+              Symptoms(id: idParam, name: nameParam, causes: causesParam);
+
+          return object;
         })
   };
 
@@ -431,4 +491,17 @@ class Item_ {
   /// see [Item.references]
   static final references =
       QueryStringProperty<Item>(_entities[2].properties[9]);
+}
+
+/// [Symptoms] entity fields to define ObjectBox queries.
+class Symptoms_ {
+  /// see [Symptoms.id]
+  static final id = QueryIntegerProperty<Symptoms>(_entities[3].properties[0]);
+
+  /// see [Symptoms.name]
+  static final name = QueryStringProperty<Symptoms>(_entities[3].properties[1]);
+
+  /// see [Symptoms.causes]
+  static final causes =
+      QueryStringVectorProperty<Symptoms>(_entities[3].properties[2]);
 }

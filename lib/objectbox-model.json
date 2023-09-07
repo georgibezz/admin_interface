@@ -119,9 +119,33 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "6:5293340169370124747",
+      "lastPropertyId": "3:6193674609565364483",
+      "name": "Symptoms",
+      "properties": [
+        {
+          "id": "1:5410593956974798263",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4020999837862553949",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:6193674609565364483",
+          "name": "causes",
+          "type": 30
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "5:807709831922303126",
+  "lastEntityId": "6:5293340169370124747",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
