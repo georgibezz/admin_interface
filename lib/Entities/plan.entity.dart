@@ -3,7 +3,7 @@ import 'package:objectbox/objectbox.dart';
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
-class Plan {
+class Plan{
   @Id()
   int id = 0;
 
