@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'objectbox.g.dart';
 import 'dart:io';
 import 'entities/item.entity.dart';
+import 'screens/home.page.dart';
 
 late final Store store;
 
@@ -45,35 +46,6 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(store: store),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  final Store store;
-
-  MyHomePage({required this.store});
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('ObjectBox Sync Flutter App'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Call the function to insert data from Excel
-            ExcelHandler.insertDataFromExcel();
-          },
-          child: Text('Import Data from Excel'),
-        ),
-      ),
     );
   }
 }
