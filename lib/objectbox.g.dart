@@ -25,7 +25,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(3, 5062988298748516354),
       name: 'Plan',
-      lastPropertyId: const IdUid(8, 1710239404745649540),
+      lastPropertyId: const IdUid(9, 1021562895988541564),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -51,6 +51,11 @@ final _entities = <ModelEntity>[
         ModelProperty(
             id: const IdUid(8, 1710239404745649540),
             name: 'howToUse',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(9, 1021562895988541564),
+            name: 'caution',
             type: 9,
             flags: 0)
       ],
@@ -239,12 +244,14 @@ ModelDefinition getObjectBoxModel() {
           final herbalAlternativeOffset =
               fbb.writeString(object.herbalAlternative);
           final howToUseOffset = fbb.writeString(object.howToUse);
-          fbb.startTable(9);
+          final cautionOffset = fbb.writeString(object.caution);
+          fbb.startTable(10);
           fbb.addInt64(0, object.id);
           fbb.addOffset(4, conditionOffset);
           fbb.addOffset(5, commonlyUsedDrugsOffset);
           fbb.addOffset(6, herbalAlternativeOffset);
           fbb.addOffset(7, howToUseOffset);
+          fbb.addOffset(8, cautionOffset);
           fbb.finish(fbb.endTable());
           return object.id;
         },
@@ -263,12 +270,15 @@ ModelDefinition getObjectBoxModel() {
                   .vTableGet(buffer, rootOffset, 16, '');
           final howToUseParam = const fb.StringReader(asciiOptimization: true)
               .vTableGet(buffer, rootOffset, 18, '');
+          final cautionParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 20, '');
           final object = Plan(
               id: idParam,
               condition: conditionParam,
               commonlyUsedDrugs: commonlyUsedDrugsParam,
               herbalAlternative: herbalAlternativeParam,
-              howToUse: howToUseParam);
+              howToUse: howToUseParam,
+              caution: cautionParam);
 
           return object;
         }),
@@ -439,6 +449,9 @@ class Plan_ {
 
   /// see [Plan.howToUse]
   static final howToUse = QueryStringProperty<Plan>(_entities[0].properties[4]);
+
+  /// see [Plan.caution]
+  static final caution = QueryStringProperty<Plan>(_entities[0].properties[5]);
 }
 
 /// [Conditions] entity fields to define ObjectBox queries.
