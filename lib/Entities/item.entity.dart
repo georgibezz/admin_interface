@@ -1,7 +1,7 @@
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
-class Item {
+class Item{
   @Id()
   int id = 0;
 

@@ -1,7 +1,7 @@
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
-class Conditions {
+class Conditions{
   @Id()
   int id = 0;
 

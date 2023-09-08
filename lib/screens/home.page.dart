@@ -1,8 +1,7 @@
+import 'package:admin/screens/library/library.crud.dart';
 import 'package:flutter/material.dart';
-
 import '../objectbox.g.dart';
 import 'condition/condition.interface.dart';
-import 'library/library.interface.dart';
 import 'plan/plan.interface.dart';
 import 'symptom/symptom.interface.dart';
 
@@ -42,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case "Library Items":
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => LibraryInterface()),
+          MaterialPageRoute(builder: (context) => ItemListingPage()),
         );
         break;
     }

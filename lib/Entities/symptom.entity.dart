@@ -1,7 +1,7 @@
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
-class Symptoms {
+class Symptoms{
   @Id()
   int id = 0;
 

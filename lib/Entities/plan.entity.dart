@@ -1,9 +1,8 @@
 import 'package:objectbox/objectbox.dart';
 
-import 'package:objectbox/objectbox.dart';
 
 @Entity()
-class Plan {
+class Plan{
   @Id()
   int id = 0;
 
@@ -19,11 +18,15 @@ class Plan {
   @Property()
   String howToUse;
 
+  @Property()
+  String caution;
+
   Plan({
     required this.id,
     required this.condition,
     required this.commonlyUsedDrugs,
     required this.herbalAlternative,
     required this.howToUse,
+    required this.caution,
   });
 }

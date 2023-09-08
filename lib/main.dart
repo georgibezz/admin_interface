@@ -1,15 +1,14 @@
-import 'package:admin/utils/excel.handler.dart';
+import 'package:admin/objectbox.store.dart';
 import 'package:flutter/material.dart';
 import 'objectbox.g.dart';
 import 'dart:io';
-import 'entities/item.entity.dart';
 import 'screens/home.page.dart';
 
 late final Store store;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  store = await openStore();
+  store = await ObjectBoxService.openStore();
   if (Sync.isAvailable()) {
     final serverUrl = 'ws://137.158.109.230:' +
         (Platform.isAndroid ? '9999' : '8888');
