@@ -1,25 +1,20 @@
-import 'package:admin/objectbox.store.dart';
+import 'package:admin/objectbox.g.dart';
 import 'package:flutter/material.dart';
-import 'objectbox.g.dart';
-import 'dart:io';
-import 'screens/home.page.dart';
+import 'package:admin/screens/home.page.dart';
+
 
 late final Store store;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  store = await ObjectBoxService.openStore();
+  store = await openStore();
   if (Sync.isAvailable()) {
-    final serverUrl = 'ws://137.158.109.230:' +
-        (Platform.isAndroid ? '9999' : '8888');
-
     Sync.client(
       store,
-      serverUrl,
+      'ws://137.158.109.230:9980',
       SyncCredentials.none(),
     ).start();
   }
-
   runApp(const MyApp());
 }
 

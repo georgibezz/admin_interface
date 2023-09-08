@@ -2,6 +2,7 @@ import 'package:objectbox/objectbox.dart';
 
 
 @Entity()
+@Sync()
 class Plan{
   @Id()
   int id = 0;
