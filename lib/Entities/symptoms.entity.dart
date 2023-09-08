@@ -1,6 +1,7 @@
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
+@Sync()
 class Symptoms{
   @Id()
   int id = 0;

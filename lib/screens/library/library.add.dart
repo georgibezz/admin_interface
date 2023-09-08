@@ -1,27 +1,28 @@
 import 'package:admin/entities/item.entity.dart';
 import 'package:flutter/material.dart';
-import 'package:admin/objectbox.store.dart';
+import 'package:admin/main.dart';
 
 
 class AddItemScreen extends StatefulWidget {
+  const AddItemScreen({Key? key}) : super(key: key);
   @override
-  _AddItemScreenState createState() => _AddItemScreenState();
+  State<AddItemScreen> createState() => _AddItemScreenState();
 }
 
 class _AddItemScreenState extends State<AddItemScreen> {
-  late TextEditingController _nameController;
-  late TextEditingController _alsoCalledController;
-  late TextEditingController _sourceController;
-  late TextEditingController _partUsedController;
-  late TextEditingController _formsAvailableController;
-  late TextEditingController _usesController;
-  late TextEditingController _cautionController;
-  late TextEditingController _conscientiousConsumerInformationController;
-  late TextEditingController _referencesController;
+  late final TextEditingController _nameController;
+  late final TextEditingController _alsoCalledController;
+  late final TextEditingController _sourceController;
+  late final TextEditingController _partUsedController;
+  late final TextEditingController _formsAvailableController;
+  late final TextEditingController _usesController;
+  late final TextEditingController _cautionController;
+  late final TextEditingController _conscientiousConsumerInformationController;
+  late final TextEditingController _referencesController;
 
   @override
   void initState() {
-    super.initState();
+
   _nameController = TextEditingController(text: '');
   _alsoCalledController = TextEditingController(text: '');
   _sourceController = TextEditingController(text: '');
@@ -31,6 +32,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
   _cautionController = TextEditingController(text: '');
   _conscientiousConsumerInformationController = TextEditingController(text: '');
   _referencesController = TextEditingController(text: '');
+  super.initState();
   }
   @override
   void dispose() {
@@ -46,6 +48,28 @@ class _AddItemScreenState extends State<AddItemScreen> {
     super.dispose();
   }
   void _showConfirmationDialog() {
+    final itemName = _nameController.text;
+    if (itemName.isEmpty) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: const Text('Error'),
+            content: const Text('Please enter a name before adding to the database.'),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('OK'),
+              ),
+            ],
+          );
+        },
+      );
+      return;
+    }
+
     showDialog(
       context: context,
       builder: (context) {
@@ -72,6 +96,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
     );
   }
 
+
   void addProduct() {
     final itemName = _nameController.text;
     final  itemAlsocalled = _alsoCalledController.text;
@@ -83,8 +108,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
     final  itemConsumerInfo =_conscientiousConsumerInformationController.text;
     final  itemReference = _referencesController.text;
 
-    if (itemName.isNotEmpty ) {
-      final newItem = Item(
+    store.box<Item>().put(Item(
         id: 0, // You can set a unique ID, or ObjectBox will auto-generate one.
         name: itemName,
         alsoCalled: itemAlsocalled,
@@ -95,15 +119,10 @@ class _AddItemScreenState extends State<AddItemScreen> {
         caution: itemCaution,
         conscientiousConsumerInformation: itemConsumerInfo,
         references: itemReference,
-      );
-
-      final itemBox = ObjectBoxService.objectBoxStore.box<Item>();
-      itemBox.put(newItem);
-
+      ));
       // Optionally, you can navigate back to the product list or another screen
       Navigator.pop(context);
     }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -173,3 +192,4 @@ class _AddItemScreenState extends State<AddItemScreen> {
     );
   }
 }
+

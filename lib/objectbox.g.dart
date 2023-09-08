@@ -17,7 +17,7 @@ import 'package:objectbox_sync_flutter_libs/objectbox_sync_flutter_libs.dart';
 import 'Entities/conditions.entity.dart';
 import 'Entities/item.entity.dart';
 import 'Entities/plan.entity.dart';
-import 'Entities/symptom.entity.dart';
+import 'Entities/symptoms.entity.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
@@ -26,7 +26,7 @@ final _entities = <ModelEntity>[
       id: const IdUid(3, 5062988298748516354),
       name: 'Plan',
       lastPropertyId: const IdUid(10, 2551518625418292979),
-      flags: 0,
+      flags: 2,
       properties: <ModelProperty>[
         ModelProperty(
             id: const IdUid(1, 7325565855644243873),
@@ -65,7 +65,7 @@ final _entities = <ModelEntity>[
       id: const IdUid(4, 1203151557266320519),
       name: 'Conditions',
       lastPropertyId: const IdUid(3, 1029188923746380241),
-      flags: 0,
+      flags: 2,
       properties: <ModelProperty>[
         ModelProperty(
             id: const IdUid(1, 4583499502016593274),
@@ -89,7 +89,7 @@ final _entities = <ModelEntity>[
       id: const IdUid(5, 807709831922303126),
       name: 'Item',
       lastPropertyId: const IdUid(10, 6369378659556070261),
-      flags: 0,
+      flags: 2,
       properties: <ModelProperty>[
         ModelProperty(
             id: const IdUid(1, 3157613714833054686),
@@ -148,7 +148,7 @@ final _entities = <ModelEntity>[
       id: const IdUid(6, 5293340169370124747),
       name: 'Symptoms',
       lastPropertyId: const IdUid(3, 6193674609565364483),
-      flags: 0,
+      flags: 2,
       properties: <ModelProperty>[
         ModelProperty(
             id: const IdUid(1, 5410593956974798263),

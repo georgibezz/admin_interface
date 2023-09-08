@@ -1,6 +1,7 @@
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
+@Sync()
 class Conditions{
   @Id()
   int id = 0;
