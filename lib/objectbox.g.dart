@@ -23,62 +23,23 @@ export 'package:objectbox/objectbox.dart'; // so that callers only have to impor
 
 final _entities = <ModelEntity>[
   ModelEntity(
-      id: const IdUid(3, 5062988298748516354),
-      name: 'Plan',
-      lastPropertyId: const IdUid(10, 2551518625418292979),
-      flags: 2,
-      properties: <ModelProperty>[
-        ModelProperty(
-            id: const IdUid(1, 7325565855644243873),
-            name: 'id',
-            type: 6,
-            flags: 1),
-        ModelProperty(
-            id: const IdUid(6, 8820603313148705527),
-            name: 'commonlyUsedDrugs',
-            type: 9,
-            flags: 0),
-        ModelProperty(
-            id: const IdUid(7, 6580912062546562000),
-            name: 'herbalAlternative',
-            type: 9,
-            flags: 0),
-        ModelProperty(
-            id: const IdUid(8, 1710239404745649540),
-            name: 'howToUse',
-            type: 9,
-            flags: 0),
-        ModelProperty(
-            id: const IdUid(9, 1021562895988541564),
-            name: 'caution',
-            type: 9,
-            flags: 0),
-        ModelProperty(
-            id: const IdUid(10, 2551518625418292979),
-            name: 'name',
-            type: 9,
-            flags: 0)
-      ],
-      relations: <ModelRelation>[],
-      backlinks: <ModelBacklink>[]),
-  ModelEntity(
-      id: const IdUid(4, 1203151557266320519),
+      id: const IdUid(1, 7678285225077280470),
       name: 'Conditions',
-      lastPropertyId: const IdUid(3, 1029188923746380241),
+      lastPropertyId: const IdUid(3, 7126765502090006170),
       flags: 2,
       properties: <ModelProperty>[
         ModelProperty(
-            id: const IdUid(1, 4583499502016593274),
+            id: const IdUid(1, 6664160954806517403),
             name: 'id',
             type: 6,
             flags: 1),
         ModelProperty(
-            id: const IdUid(2, 3771466489577810201),
+            id: const IdUid(2, 6399919140709274663),
             name: 'name',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(3, 1029188923746380241),
+            id: const IdUid(3, 7126765502090006170),
             name: 'causes',
             type: 30,
             flags: 0)
@@ -86,58 +47,58 @@ final _entities = <ModelEntity>[
       relations: <ModelRelation>[],
       backlinks: <ModelBacklink>[]),
   ModelEntity(
-      id: const IdUid(5, 807709831922303126),
+      id: const IdUid(2, 5500951728173333461),
       name: 'Item',
-      lastPropertyId: const IdUid(10, 6369378659556070261),
+      lastPropertyId: const IdUid(10, 3423678449137969975),
       flags: 2,
       properties: <ModelProperty>[
         ModelProperty(
-            id: const IdUid(1, 3157613714833054686),
+            id: const IdUid(1, 4669864038680476952),
             name: 'id',
             type: 6,
             flags: 1),
         ModelProperty(
-            id: const IdUid(2, 7122292881347662402),
+            id: const IdUid(2, 7729444282493931848),
             name: 'name',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(3, 7772560157505084293),
+            id: const IdUid(3, 1850666574500959543),
             name: 'alsoCalled',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(4, 7078256748978629697),
+            id: const IdUid(4, 7483981696746948818),
             name: 'source',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(5, 7136333561074695005),
+            id: const IdUid(5, 2606039991151617632),
             name: 'partUsed',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(6, 8576542471820391976),
+            id: const IdUid(6, 1346806256880740485),
             name: 'formsAvailable',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(7, 452089478305907725),
+            id: const IdUid(7, 2443944303401460339),
             name: 'uses',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(8, 1170098714901606795),
+            id: const IdUid(8, 6336255779936396239),
             name: 'caution',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(9, 4411069709684713950),
+            id: const IdUid(9, 3213730693329512884),
             name: 'conscientiousConsumerInformation',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(10, 6369378659556070261),
+            id: const IdUid(10, 3423678449137969975),
             name: 'references',
             type: 9,
             flags: 0)
@@ -145,23 +106,62 @@ final _entities = <ModelEntity>[
       relations: <ModelRelation>[],
       backlinks: <ModelBacklink>[]),
   ModelEntity(
-      id: const IdUid(6, 5293340169370124747),
-      name: 'Symptoms',
-      lastPropertyId: const IdUid(3, 6193674609565364483),
+      id: const IdUid(3, 947300628002161188),
+      name: 'Plan',
+      lastPropertyId: const IdUid(6, 7900327841771851220),
       flags: 2,
       properties: <ModelProperty>[
         ModelProperty(
-            id: const IdUid(1, 5410593956974798263),
+            id: const IdUid(1, 747256749595930942),
             name: 'id',
             type: 6,
             flags: 1),
         ModelProperty(
-            id: const IdUid(2, 4020999837862553949),
+            id: const IdUid(2, 4717993113130385615),
             name: 'name',
             type: 9,
             flags: 0),
         ModelProperty(
-            id: const IdUid(3, 6193674609565364483),
+            id: const IdUid(3, 5478668805492741048),
+            name: 'commonlyUsedDrugs',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(4, 5187580093094621363),
+            name: 'herbalAlternative',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(5, 8134638662147849547),
+            name: 'howToUse',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(6, 7900327841771851220),
+            name: 'caution',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <ModelRelation>[],
+      backlinks: <ModelBacklink>[]),
+  ModelEntity(
+      id: const IdUid(4, 8994218004266214437),
+      name: 'Symptoms',
+      lastPropertyId: const IdUid(3, 2310063977096541058),
+      flags: 2,
+      properties: <ModelProperty>[
+        ModelProperty(
+            id: const IdUid(1, 3572311247507002121),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        ModelProperty(
+            id: const IdUid(2, 3528047310567883127),
+            name: 'name',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(3, 2310063977096541058),
             name: 'causes',
             type: 30,
             flags: 0)
@@ -197,94 +197,21 @@ Future<Store> openStore(
 ModelDefinition getObjectBoxModel() {
   final model = ModelInfo(
       entities: _entities,
-      lastEntityId: const IdUid(6, 5293340169370124747),
+      lastEntityId: const IdUid(4, 8994218004266214437),
       lastIndexId: const IdUid(0, 0),
       lastRelationId: const IdUid(0, 0),
       lastSequenceId: const IdUid(0, 0),
-      retiredEntityUids: const [7156376995514361613, 5737983589119967379],
+      retiredEntityUids: const [],
       retiredIndexUids: const [],
-      retiredPropertyUids: const [
-        5470165977763736949,
-        304611855508611774,
-        1811975008986571413,
-        9168253028374504162,
-        4909696018707405954,
-        3280318805178033855,
-        3911973129190700674,
-        8728788337455760273,
-        3354576037621185619,
-        4681244288878565703,
-        8367681146813746213,
-        3799544707657440002,
-        6324284888265641205,
-        620823307664622911,
-        1114562976023767699,
-        6181987701388496367,
-        2336374572361523251,
-        7741183020542145625,
-        253515875125291318
-      ],
+      retiredPropertyUids: const [],
       retiredRelationUids: const [],
       modelVersion: 5,
       modelVersionParserMinimum: 5,
       version: 1);
 
   final bindings = <Type, EntityDefinition>{
-    Plan: EntityDefinition<Plan>(
-        model: _entities[0],
-        toOneRelations: (Plan object) => [],
-        toManyRelations: (Plan object) => {},
-        getId: (Plan object) => object.id,
-        setId: (Plan object, int id) {
-          object.id = id;
-        },
-        objectToFB: (Plan object, fb.Builder fbb) {
-          final commonlyUsedDrugsOffset =
-              fbb.writeString(object.commonlyUsedDrugs);
-          final herbalAlternativeOffset =
-              fbb.writeString(object.herbalAlternative);
-          final howToUseOffset = fbb.writeString(object.howToUse);
-          final cautionOffset = fbb.writeString(object.caution);
-          final nameOffset = fbb.writeString(object.name);
-          fbb.startTable(11);
-          fbb.addInt64(0, object.id);
-          fbb.addOffset(5, commonlyUsedDrugsOffset);
-          fbb.addOffset(6, herbalAlternativeOffset);
-          fbb.addOffset(7, howToUseOffset);
-          fbb.addOffset(8, cautionOffset);
-          fbb.addOffset(9, nameOffset);
-          fbb.finish(fbb.endTable());
-          return object.id;
-        },
-        objectFromFB: (Store store, ByteData fbData) {
-          final buffer = fb.BufferContext(fbData);
-          final rootOffset = buffer.derefObject(0);
-          final idParam =
-              const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
-          final nameParam = const fb.StringReader(asciiOptimization: true)
-              .vTableGet(buffer, rootOffset, 22, '');
-          final commonlyUsedDrugsParam =
-              const fb.StringReader(asciiOptimization: true)
-                  .vTableGet(buffer, rootOffset, 14, '');
-          final herbalAlternativeParam =
-              const fb.StringReader(asciiOptimization: true)
-                  .vTableGet(buffer, rootOffset, 16, '');
-          final howToUseParam = const fb.StringReader(asciiOptimization: true)
-              .vTableGet(buffer, rootOffset, 18, '');
-          final cautionParam = const fb.StringReader(asciiOptimization: true)
-              .vTableGet(buffer, rootOffset, 20, '');
-          final object = Plan(
-              id: idParam,
-              name: nameParam,
-              commonlyUsedDrugs: commonlyUsedDrugsParam,
-              herbalAlternative: herbalAlternativeParam,
-              howToUse: howToUseParam,
-              caution: cautionParam);
-
-          return object;
-        }),
     Conditions: EntityDefinition<Conditions>(
-        model: _entities[1],
+        model: _entities[0],
         toOneRelations: (Conditions object) => [],
         toManyRelations: (Conditions object) => {},
         getId: (Conditions object) => object.id,
@@ -319,7 +246,7 @@ ModelDefinition getObjectBoxModel() {
           return object;
         }),
     Item: EntityDefinition<Item>(
-        model: _entities[2],
+        model: _entities[1],
         toOneRelations: (Item object) => [],
         toManyRelations: (Item object) => {},
         getId: (Item object) => object.id,
@@ -391,6 +318,59 @@ ModelDefinition getObjectBoxModel() {
 
           return object;
         }),
+    Plan: EntityDefinition<Plan>(
+        model: _entities[2],
+        toOneRelations: (Plan object) => [],
+        toManyRelations: (Plan object) => {},
+        getId: (Plan object) => object.id,
+        setId: (Plan object, int id) {
+          object.id = id;
+        },
+        objectToFB: (Plan object, fb.Builder fbb) {
+          final nameOffset = fbb.writeString(object.name);
+          final commonlyUsedDrugsOffset =
+              fbb.writeString(object.commonlyUsedDrugs);
+          final herbalAlternativeOffset =
+              fbb.writeString(object.herbalAlternative);
+          final howToUseOffset = fbb.writeString(object.howToUse);
+          final cautionOffset = fbb.writeString(object.caution);
+          fbb.startTable(7);
+          fbb.addInt64(0, object.id);
+          fbb.addOffset(1, nameOffset);
+          fbb.addOffset(2, commonlyUsedDrugsOffset);
+          fbb.addOffset(3, herbalAlternativeOffset);
+          fbb.addOffset(4, howToUseOffset);
+          fbb.addOffset(5, cautionOffset);
+          fbb.finish(fbb.endTable());
+          return object.id;
+        },
+        objectFromFB: (Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
+          final nameParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 6, '');
+          final commonlyUsedDrugsParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGet(buffer, rootOffset, 8, '');
+          final herbalAlternativeParam =
+              const fb.StringReader(asciiOptimization: true)
+                  .vTableGet(buffer, rootOffset, 10, '');
+          final howToUseParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 12, '');
+          final cautionParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 14, '');
+          final object = Plan(
+              id: idParam,
+              name: nameParam,
+              commonlyUsedDrugs: commonlyUsedDrugsParam,
+              herbalAlternative: herbalAlternativeParam,
+              howToUse: howToUseParam,
+              caution: cautionParam);
+
+          return object;
+        }),
     Symptoms: EntityDefinition<Symptoms>(
         model: _entities[3],
         toOneRelations: (Symptoms object) => [],
@@ -431,79 +411,79 @@ ModelDefinition getObjectBoxModel() {
   return ModelDefinition(model, bindings);
 }
 
-/// [Plan] entity fields to define ObjectBox queries.
-class Plan_ {
-  /// see [Plan.id]
-  static final id = QueryIntegerProperty<Plan>(_entities[0].properties[0]);
-
-  /// see [Plan.commonlyUsedDrugs]
-  static final commonlyUsedDrugs =
-      QueryStringProperty<Plan>(_entities[0].properties[1]);
-
-  /// see [Plan.herbalAlternative]
-  static final herbalAlternative =
-      QueryStringProperty<Plan>(_entities[0].properties[2]);
-
-  /// see [Plan.howToUse]
-  static final howToUse = QueryStringProperty<Plan>(_entities[0].properties[3]);
-
-  /// see [Plan.caution]
-  static final caution = QueryStringProperty<Plan>(_entities[0].properties[4]);
-
-  /// see [Plan.name]
-  static final name = QueryStringProperty<Plan>(_entities[0].properties[5]);
-}
-
 /// [Conditions] entity fields to define ObjectBox queries.
 class Conditions_ {
   /// see [Conditions.id]
   static final id =
-      QueryIntegerProperty<Conditions>(_entities[1].properties[0]);
+      QueryIntegerProperty<Conditions>(_entities[0].properties[0]);
 
   /// see [Conditions.name]
   static final name =
-      QueryStringProperty<Conditions>(_entities[1].properties[1]);
+      QueryStringProperty<Conditions>(_entities[0].properties[1]);
 
   /// see [Conditions.causes]
   static final causes =
-      QueryStringVectorProperty<Conditions>(_entities[1].properties[2]);
+      QueryStringVectorProperty<Conditions>(_entities[0].properties[2]);
 }
 
 /// [Item] entity fields to define ObjectBox queries.
 class Item_ {
   /// see [Item.id]
-  static final id = QueryIntegerProperty<Item>(_entities[2].properties[0]);
+  static final id = QueryIntegerProperty<Item>(_entities[1].properties[0]);
 
   /// see [Item.name]
-  static final name = QueryStringProperty<Item>(_entities[2].properties[1]);
+  static final name = QueryStringProperty<Item>(_entities[1].properties[1]);
 
   /// see [Item.alsoCalled]
   static final alsoCalled =
-      QueryStringProperty<Item>(_entities[2].properties[2]);
+      QueryStringProperty<Item>(_entities[1].properties[2]);
 
   /// see [Item.source]
-  static final source = QueryStringProperty<Item>(_entities[2].properties[3]);
+  static final source = QueryStringProperty<Item>(_entities[1].properties[3]);
 
   /// see [Item.partUsed]
-  static final partUsed = QueryStringProperty<Item>(_entities[2].properties[4]);
+  static final partUsed = QueryStringProperty<Item>(_entities[1].properties[4]);
 
   /// see [Item.formsAvailable]
   static final formsAvailable =
-      QueryStringProperty<Item>(_entities[2].properties[5]);
+      QueryStringProperty<Item>(_entities[1].properties[5]);
 
   /// see [Item.uses]
-  static final uses = QueryStringProperty<Item>(_entities[2].properties[6]);
+  static final uses = QueryStringProperty<Item>(_entities[1].properties[6]);
 
   /// see [Item.caution]
-  static final caution = QueryStringProperty<Item>(_entities[2].properties[7]);
+  static final caution = QueryStringProperty<Item>(_entities[1].properties[7]);
 
   /// see [Item.conscientiousConsumerInformation]
   static final conscientiousConsumerInformation =
-      QueryStringProperty<Item>(_entities[2].properties[8]);
+      QueryStringProperty<Item>(_entities[1].properties[8]);
 
   /// see [Item.references]
   static final references =
-      QueryStringProperty<Item>(_entities[2].properties[9]);
+      QueryStringProperty<Item>(_entities[1].properties[9]);
+}
+
+/// [Plan] entity fields to define ObjectBox queries.
+class Plan_ {
+  /// see [Plan.id]
+  static final id = QueryIntegerProperty<Plan>(_entities[2].properties[0]);
+
+  /// see [Plan.name]
+  static final name = QueryStringProperty<Plan>(_entities[2].properties[1]);
+
+  /// see [Plan.commonlyUsedDrugs]
+  static final commonlyUsedDrugs =
+      QueryStringProperty<Plan>(_entities[2].properties[2]);
+
+  /// see [Plan.herbalAlternative]
+  static final herbalAlternative =
+      QueryStringProperty<Plan>(_entities[2].properties[3]);
+
+  /// see [Plan.howToUse]
+  static final howToUse = QueryStringProperty<Plan>(_entities[2].properties[4]);
+
+  /// see [Plan.caution]
+  static final caution = QueryStringProperty<Plan>(_entities[2].properties[5]);
 }
 
 /// [Symptoms] entity fields to define ObjectBox queries.
