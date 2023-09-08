@@ -25,7 +25,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(3, 5062988298748516354),
       name: 'Plan',
-      lastPropertyId: const IdUid(9, 1021562895988541564),
+      lastPropertyId: const IdUid(10, 2551518625418292979),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -33,11 +33,6 @@ final _entities = <ModelEntity>[
             name: 'id',
             type: 6,
             flags: 1),
-        ModelProperty(
-            id: const IdUid(5, 253515875125291318),
-            name: 'condition',
-            type: 9,
-            flags: 0),
         ModelProperty(
             id: const IdUid(6, 8820603313148705527),
             name: 'commonlyUsedDrugs',
@@ -56,6 +51,11 @@ final _entities = <ModelEntity>[
         ModelProperty(
             id: const IdUid(9, 1021562895988541564),
             name: 'caution',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(10, 2551518625418292979),
+            name: 'name',
             type: 9,
             flags: 0)
       ],
@@ -221,7 +221,8 @@ ModelDefinition getObjectBoxModel() {
         1114562976023767699,
         6181987701388496367,
         2336374572361523251,
-        7741183020542145625
+        7741183020542145625,
+        253515875125291318
       ],
       retiredRelationUids: const [],
       modelVersion: 5,
@@ -238,20 +239,20 @@ ModelDefinition getObjectBoxModel() {
           object.id = id;
         },
         objectToFB: (Plan object, fb.Builder fbb) {
-          final conditionOffset = fbb.writeString(object.condition);
           final commonlyUsedDrugsOffset =
               fbb.writeString(object.commonlyUsedDrugs);
           final herbalAlternativeOffset =
               fbb.writeString(object.herbalAlternative);
           final howToUseOffset = fbb.writeString(object.howToUse);
           final cautionOffset = fbb.writeString(object.caution);
-          fbb.startTable(10);
+          final nameOffset = fbb.writeString(object.name);
+          fbb.startTable(11);
           fbb.addInt64(0, object.id);
-          fbb.addOffset(4, conditionOffset);
           fbb.addOffset(5, commonlyUsedDrugsOffset);
           fbb.addOffset(6, herbalAlternativeOffset);
           fbb.addOffset(7, howToUseOffset);
           fbb.addOffset(8, cautionOffset);
+          fbb.addOffset(9, nameOffset);
           fbb.finish(fbb.endTable());
           return object.id;
         },
@@ -260,8 +261,8 @@ ModelDefinition getObjectBoxModel() {
           final rootOffset = buffer.derefObject(0);
           final idParam =
               const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
-          final conditionParam = const fb.StringReader(asciiOptimization: true)
-              .vTableGet(buffer, rootOffset, 12, '');
+          final nameParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 22, '');
           final commonlyUsedDrugsParam =
               const fb.StringReader(asciiOptimization: true)
                   .vTableGet(buffer, rootOffset, 14, '');
@@ -274,7 +275,7 @@ ModelDefinition getObjectBoxModel() {
               .vTableGet(buffer, rootOffset, 20, '');
           final object = Plan(
               id: idParam,
-              condition: conditionParam,
+              name: nameParam,
               commonlyUsedDrugs: commonlyUsedDrugsParam,
               herbalAlternative: herbalAlternativeParam,
               howToUse: howToUseParam,
@@ -435,23 +436,22 @@ class Plan_ {
   /// see [Plan.id]
   static final id = QueryIntegerProperty<Plan>(_entities[0].properties[0]);
 
-  /// see [Plan.condition]
-  static final condition =
-      QueryStringProperty<Plan>(_entities[0].properties[1]);
-
   /// see [Plan.commonlyUsedDrugs]
   static final commonlyUsedDrugs =
-      QueryStringProperty<Plan>(_entities[0].properties[2]);
+      QueryStringProperty<Plan>(_entities[0].properties[1]);
 
   /// see [Plan.herbalAlternative]
   static final herbalAlternative =
-      QueryStringProperty<Plan>(_entities[0].properties[3]);
+      QueryStringProperty<Plan>(_entities[0].properties[2]);
 
   /// see [Plan.howToUse]
-  static final howToUse = QueryStringProperty<Plan>(_entities[0].properties[4]);
+  static final howToUse = QueryStringProperty<Plan>(_entities[0].properties[3]);
 
   /// see [Plan.caution]
-  static final caution = QueryStringProperty<Plan>(_entities[0].properties[5]);
+  static final caution = QueryStringProperty<Plan>(_entities[0].properties[4]);
+
+  /// see [Plan.name]
+  static final name = QueryStringProperty<Plan>(_entities[0].properties[5]);
 }
 
 /// [Conditions] entity fields to define ObjectBox queries.
