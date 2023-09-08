@@ -1,7 +1,6 @@
 import 'package:excel/excel.dart';
 import 'dart:io';
 import 'package:admin/entities/item.entity.dart';
-import '../objectbox.store.dart';
 
 class ExcelHandler {
   static Future<void> insertDataFromExcel() async {
@@ -34,6 +33,6 @@ class ExcelHandler {
       }
     }
 
-    ObjectBoxService.insertHerbProfiles(herbProfiles);
+    //ObjectBoxService.insertHerbProfiles(herbProfiles);
   }
 }

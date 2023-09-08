@@ -2,12 +2,13 @@ import 'package:objectbox/objectbox.dart';
 
 
 @Entity()
+@Sync()
 class Plan{
   @Id()
   int id = 0;
 
   @Property()
-  String condition;
+  String name;
 
   @Property()
   String commonlyUsedDrugs;
@@ -23,7 +24,7 @@ class Plan{
 
   Plan({
     required this.id,
-    required this.condition,
+    required this.name,
     required this.commonlyUsedDrugs,
     required this.herbalAlternative,
     required this.howToUse,
