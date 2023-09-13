@@ -30,4 +30,31 @@ class Plan{
     required this.howToUse,
     required this.caution,
   });
+  Plan toEntity() {
+    return Plan(
+      name: name,
+      howToUse: howToUse,
+      caution: caution,
+      commonlyUsedDrugs: commonlyUsedDrugs,
+      herbalAlternative: herbalAlternative,
+      id: id, // Make sure to include the id if applicable
+    );
+  }
+  Plan toPlan() {
+    return Plan(
+      id: id, // Make sure to include the id if applicable
+      name: name,
+      howToUse: howToUse,
+      caution: caution,
+      commonlyUsedDrugs: commonlyUsedDrugs,
+      herbalAlternative: herbalAlternative,
+    );
+  }
+   update(Plan newValues, box) {
+    name = newValues.name;
+    howToUse = newValues.howToUse;
+    caution = newValues.caution;
+    commonlyUsedDrugs = newValues.commonlyUsedDrugs;
+    herbalAlternative = newValues.herbalAlternative;
+  }
 }

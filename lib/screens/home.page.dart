@@ -1,5 +1,7 @@
+import 'package:admin/main.dart';
 import 'package:admin/screens/library/library.crud.dart';
 import 'package:flutter/material.dart';
+import '../Entities/plan.entity.dart';
 import '../objectbox.g.dart';
 import 'condition/condition.interface.dart';
 import 'plan/plan.interface.dart';
@@ -23,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case "Plan":
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => PlanInterface()),
+          MaterialPageRoute(builder: (context) => RemedyPlanDropdown(store: store, onAddClicked: (Plan newPlan) {  },)),
         );
         break;
       case "Symptoms":
